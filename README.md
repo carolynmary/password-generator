@@ -8,3 +8,6 @@
 
 ## commit 3
 - filling in code phase 1
+
+## commit 4
+- edited generatePassword function
