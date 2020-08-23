@@ -5,3 +5,6 @@
 
 ## commit 2
 - pseudocode added to js file
+
+## commit 3
+- filling in code phase 1
