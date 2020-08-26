@@ -11,3 +11,6 @@
 
 ## commit 4
 - edited generatePassword function
+
+## commit 5
+- updated js code after TA and Tutor input

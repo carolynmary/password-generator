@@ -4,13 +4,13 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function start() {
   console.log("we're here!");
-  var password = generatePassword();
+  var password = generatePasswordStart();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
 
 //return a string
-function generatePassword() {
+function generatePasswordStart() {
 
   // ======= vars definitions ======
 
@@ -27,7 +27,7 @@ function generatePassword() {
   // ======= functions definitions ======
 
   // FUNCTION 1: gets user options and store in vars
-  function getUserOptions() {
+  // function getUserOptions() {
 
     // asking CHARACTER LENGTH: it should be at least 8 chars and no more than 128 chars
     var passwordLength = prompt("How many characters would you like your password to be? (min 8, max 128)");
@@ -51,48 +51,56 @@ function generatePassword() {
     }
 
     // NESTED FUNCTION A: generates password according to user selections
-    function generatePassword(userOptions) {
-      var userOption = getUserOptions();
+    // function generatePassword(userOptions) {
+      // var userOption = getUserOptions();
       // Variable to store password as it's being concatenated
       var password = [];
 
       // if lowercase was selected by user:
-      if (userOption.wantLowercase) {
-        // push a random lower char to password
+      if (wantLowercase) {
+        // push one random lower char to password
+        userOptionalChars.push(lowerCasedCharacters)
         // add lowerCharsArray to userOptionalChars
       }
 
       // if uppercase was selected by user:
-      if (userOption.wantUppercase) {
+      if (wantUppercase) {
         // push a random upper char to password
+        userOptionalChars.push(upperCasedCharacters)
         // add upperCharsArray to userOptionalChars
       }
 
       // if special characters was selected by user:
-      if (userOption.wantSpecial) {
+      if (wantSpecial) {
         // push a random special char to password
+        userOptionalChars.push(specialCharacters)
         // add specialCharsArray to userOptionalChars
       }
 
       // if numeric was selected by user:
-      if (userOption.wantNumbers) {
+      if (wantNumbers) {
         // push a random numeric char to password
+        userOptionalChars.push(numericCharacters)
         // add numericCharsArray to userOptionalChars
       }
 
-      // for loop between start number of elements in password to the requested number of charactars
-      for (i = 0; passwordLength.length; i++) {
-
+      // for loop between start number of elements in password to the requested number of characters
+      for (var i = 0; i < passwordLength.length; i++) {
+        password.push(userOptionalChars[Math.floor(Math.random()*passwordLength.length)]);
+        
       }
+
       // mutate the array to a string
       // return password string
-      return result.join('');
-    }
+      // return result.join('');
+      console.log(password)
+    // }
 
     // NESTED FUNCTION B: calls (start) 
-    getUserOptions();
-    generatePassword(userOption);
-  }
+    // getUserOptions();
+    // generatePassword(userOption);
+  // }
+}
 
   // Add event listener to generate button
   generateBtn.addEventListener("click", start);
@@ -105,4 +113,5 @@ function generatePassword() {
   //   expectNumericChars: false,
   //   expectUppercaseChars: false,
   //   expectLowercaseChars: false,
-  // }
+
+  // generatePassword()  // this line added by harrison
