@@ -17,7 +17,7 @@ function generatePasswordStart() {
     alert("Password must be between 8 and 128 characters. Please start again.");
     return;
   }
-  if (passwordLength !== Number) { // checking if answer is a number
+  if (isNaN(passwordLength) === true) { // checking if answer is a number
     alert("Password length must be entered as a number. Please start again.");
     return;
   }
