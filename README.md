@@ -1,4 +1,4 @@
-![header](./assets/images/cm_header.png)
+![header](./Assets/images/cm_header.png)
 <!-- Badges -->
 ![HTML](https://img.shields.io/badge/HTML-red) ![CSS](https://img.shields.io/badge/CSS-purple) ![JavaScript](https://img.shields.io/badge/JavaScript-yellow) ![License](https://img.shields.io/badge/License-MIT-green) </br>
 
@@ -35,5 +35,5 @@ Porfolio: [carolynmary.com](https://carolynmary.com)
   
 </br>
 
-![footer](./assets/images/cm_footer.png)
+![footer](./Assets/images/cm_footer.png)
 © 2020 Carolyn Mary Stolze
